@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regexEvaluator id="78314c8e-90a1-4abb-9866-4b50e545dad9">
+  <descriptionCdata><![CDATA[78314c8e-90a1-4abb-9866-4b50e545dad9.description=OO350 Lab 5 ex 3\nEvaluator for email addresses. Does not support international characters (RFC\n5336). Does not support quotes for local part (for instance "John\nSmith"@company.com).
+]]></descriptionCdata>
+  <annotation>78314c8e-90a1-4abb-9866-4b50e545dad9.description</annotation>
+  <name>email</name>
+  <entireString>true</entireString>
+  <expression>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}</expression>
+  <ignoreCase>false</ignoreCase>
+  <multiLine>false</multiLine>
+  <regType>PERL5</regType>
+</regexEvaluator>

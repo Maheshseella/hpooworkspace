@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="58ab54e6-0c02-4262-ae1b-f35741a61a0a">
+  <descriptionCdata><![CDATA[58ab54e6-0c02-4262-ae1b-f35741a61a0a.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nInputs\:\nfield1 - optional input that can be used for filtering flow variables.\nfield2 - optional input that can be used for filtering flow variables.\nfield3 - optional input that can be used for filtering flow variables.\nfield4 - optional input that can be used for filtering flow variables.\n\nResponses\:\nsuccess - this operation never fails.\n</pre>
+]]></descriptionCdata>
+  <annotation>58ab54e6-0c02-4262-ae1b-f35741a61a0a.description</annotation>
+  <name>E3 Validate Email Address</name>
+  <categories/>
+  <inputs>
+    <staticBinding id="cd00f4a7-0875-4cac-8b4f-90be385f6927">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field1</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="e3f092df-3163-43fb-90b5-48f2c9c93877">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field2</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="ddd46b36-2e5e-4873-9a9b-d075d29c424e">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field3</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="e36879c0-a28f-4678-8b7f-194ac4a2718a">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field4</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="a381830a-d640-47cd-b023-2e2e2f8290fc">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_1</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field1}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="66cc0d8f-a565-433a-9e1d-08c7e9f7672d">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_2</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field2}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="b1002a96-26dd-41e7-97a1-c72ba176859d">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_3</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field3}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="0dd99a4f-eb9f-40c1-9fb5-59f2255127a1">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_4</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field4}</value>
+      <record>false</record>
+    </staticBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="3c76fec3-07c2-4cb6-9c71-50abc49b3b4b">
+      <annotation></annotation>
+      <name>Valid Email</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules>
+        <expression id="7f1ea5d0-2679-4301-8aa7-be84d7569ba2">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <referenceEvaluator id="b485eaed-956e-4d16-b628-a25e60c8538c">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <evaluatorRef>
+              <refId>78314c8e-90a1-4abb-9866-4b50e545dad9</refId>
+              <refName>email</refName>
+            </evaluatorRef>
+          </referenceEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="b601f33d-f09c-4b0d-8dd9-8d476d8f93ae">
+      <annotation></annotation>
+      <name>Invalid Email</name>
+      <isDefault>true</isDefault>
+      <onFailure>true</onFailure>
+      <type>ERROR</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="41489683-8518-4899-a2f9-edaad0287760">
+    <annotation></annotation>
+    <name></name>
+    <fieldName>Field_1</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="18d0429d-852c-4a51-ac93-e0b9c702e81a">
+    <baseIcon>display_report.png</baseIcon>
+    <basePath>Utilities/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <opRef>
+    <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+</operation>

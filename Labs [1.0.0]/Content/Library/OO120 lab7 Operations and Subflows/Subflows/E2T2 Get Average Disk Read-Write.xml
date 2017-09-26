@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="249729f2-1085-40fd-88aa-c7a0abb8ea3d">
+  <descriptionCdata><![CDATA[249729f2-1085-40fd-88aa-c7a0abb8ea3d.82147fc7-41d9-4331-873e-a8eb4a500cae.description=<pre>\nRetrieves the requested Windows Performance Counter Value.  Takes 5 samples in 1 second intervals and returns the average.\n\nInput Parameters\:\nhost - Hostname or ip address of the target machine.\nobject - The counter object (ex. Processor).\ncounter - The counter's name (ex. % Processor Time).\ninstance - The instance of the counter (if applicable) (ex. _Total).\nuser - Username to use for thread impersonation on the RAS host for this operation (can be left blank).\npassword - Password of the user.\n\nResponses\:\nsuccess - Retrieved the counter successfully.\nfailure - Failed to retrieve the counter.\n\nExtra Results\:\nVALUE - The actual value captured.\n\nNotes\:\nThis operation checks the value of a performance counter that must be running on the target windows host prior to flow execution\:\nPerformance Object\: physicaldisk\nPerformance Counter\: avg. disk sec/read\nThis performance counter can be enabled using PerfMon.exe on the target host.\n</pre>
+249729f2-1085-40fd-88aa-c7a0abb8ea3d.83b8da28-cd3c-4ecd-9be2-d0852789d85f.prompt=HostName\:
+249729f2-1085-40fd-88aa-c7a0abb8ea3d.e881997b-c10f-484e-9c51-b3e7a03452bd.prompt=HostName\:
+249729f2-1085-40fd-88aa-c7a0abb8ea3d.f980948f-7a12-4b45-ba81-c10dd70e16a7.description=<pre>\nRetrieves the requested Windows Performance Counter Value.  Takes 5 samples in 1 second intervals and returns the average.\n\nInput Parameters\:\nhost - Hostname or ip address of the target machine.\nobject - The counter object (ex. Processor).\ncounter - The counter's name (ex. % Processor Time).\ninstance - The instance of the counter (if applicable) (ex. _Total).\nuser - Username to use for thread impersonation on the RAS host for this operation (can be left blank).\npassword - Password of the user.\n\nResponses\:\nsuccess - Retrieved the counter successfully.\nfailure - Failed to retrieve the counter.\n\nExtra Results\:\nVALUE - The actual value captured.\n\nNotes\:\nThis operation checks the value of a performance counter that must be running on the target windows host prior to flow execution\:\nPerformance Object\: physicaldisk\nPerformance Counter\: avg. disk sec/write\nThis performance counter can be enabled using PerfMon.exe on the target host.\n</pre>
+]]></descriptionCdata>
+  <annotation></annotation>
+  <name>E2T2 Get Average Disk Read-Write</name>
+  <categories/>
+  <inputs>
+    <userInputBinding id="7840f88b-a2e4-4e09-8606-16872e7528ed">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>true</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>host</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="9b792033-651c-4967-84d9-eaa39b8db514">
+      <annotation></annotation>
+      <name>failure</name>
+      <isDefault>false</isDefault>
+      <onFailure>true</onFailure>
+      <type>ERROR</type>
+      <matchRules/>
+    </opResponse>
+    <opResponse id="821db211-8084-42a9-8656-2c4715dc727b">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions>
+    <expression id="9b2f67ac-c8f2-4358-94c7-ebe98441ddd8">
+      <annotation></annotation>
+      <name>diskRead</name>
+      <fieldName>diskRead</fieldName>
+      <sourceType>RAWRESULT</sourceType>
+      <filters/>
+    </expression>
+    <expression id="dea035b3-3072-496a-b11a-c1887820246f">
+      <annotation></annotation>
+      <name>diskWrite</name>
+      <fieldName>diskWrite</fieldName>
+      <sourceType>RAWRESULT</sourceType>
+      <filters/>
+    </expression>
+  </availableResultExpressions>
+  <resultExpression id="94d190d4-a4ba-416b-abad-423478ded784">
+    <annotation></annotation>
+    <name>diskRead</name>
+    <fieldName>diskRead</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="e9c8a4f8-1aa9-4bfa-8795-0c7de5f7aa74">
+    <baseIcon>flow.png</baseIcon>
+    <basePath>System</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <callouts/>
+  <checkPointFlow>true</checkPointFlow>
+  <compatibleRuntimeContext>false</compatibleRuntimeContext>
+  <historyCheckPointFlow>true</historyCheckPointFlow>
+  <steps>
+    <step id="82147fc7-41d9-4331-873e-a8eb4a500cae">
+      <annotation>249729f2-1085-40fd-88aa-c7a0abb8ea3d.82147fc7-41d9-4331-873e-a8eb4a500cae.description</annotation>
+      <name>Get Average Seconds per Disk Read</name>
+      <bounds>
+        <x>85.0</x>
+        <y>20.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <iconSpec id="2bc4ec67-4b1b-4558-931c-61551e0ad80c">
+        <baseIcon>document_pulse.png</baseIcon>
+        <basePath>Operating System/</basePath>
+        <readOnly>false</readOnly>
+        <layers>
+          <iconSpec id="e50e2c4c-62ee-4def-aa6c-8905f14f47cd">
+            <baseIcon>harddisk.png</baseIcon>
+            <basePath>Operating System/</basePath>
+            <readOnly>false</readOnly>
+            <layers/>
+          </iconSpec>
+          <iconSpec id="64ed7f65-8f21-465e-bae2-b9ae49142e54">
+            <baseIcon>view.png</baseIcon>
+            <basePath>Annotations/</basePath>
+            <readOnly>false</readOnly>
+            <layers/>
+          </iconSpec>
+        </layers>
+      </iconSpec>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <userInputBinding id="e881997b-c10f-484e-9c51-b3e7a03452bd">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>host</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+          <prompt>249729f2-1085-40fd-88aa-c7a0abb8ea3d.e881997b-c10f-484e-9c51-b3e7a03452bd.prompt</prompt>
+          <isMultiSelect>false</isMultiSelect>
+          <sourceDelimiter>|</sourceDelimiter>
+        </userInputBinding>
+        <staticBinding id="dabd79ce-07f1-45a5-b729-2d35ba9c961a">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>object</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>physicaldisk</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="e32b154c-3fbc-4255-8e07-2079c95b160c">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>counter</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>avg. disk sec/read</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="b05307af-9377-44c2-b211-fa7ea46f89f4">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>instance</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>_total</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="0ab3cfc2-4901-4c48-a594-d9b07adcc44a">
+          <annotation></annotation>
+          <name>failure</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>04e684fe-bae1-40bb-a56b-a0aa2717704c</refId>
+          </destination>
+          <source>
+            <refId>82147fc7-41d9-4331-873e-a8eb4a500cae</refId>
+          </source>
+          <positions>
+            <point>
+              <x>150.37037037037038</x>
+              <y>86.0</y>
+            </point>
+            <point>
+              <x>187.0</x>
+              <y>93.0</y>
+            </point>
+            <point>
+              <x>135.0</x>
+              <y>217.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+        <transition id="00024f74-9991-4aff-aab5-4831449621c4">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>f980948f-7a12-4b45-ba81-c10dd70e16a7</refId>
+          </destination>
+          <source>
+            <refId>82147fc7-41d9-4331-873e-a8eb4a500cae</refId>
+          </source>
+          <positions>
+            <point>
+              <x>135.0</x>
+              <y>54.0</y>
+            </point>
+            <point>
+              <x>294.0</x>
+              <y>54.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>2c5840dc-7124-4bcc-a9ac-ae49e387b9d5</refId>
+      </opRef>
+      <assignments>
+        <flowVariableAssignment id="14e0ca09-a5b7-4248-9d13-7c7015c277ec">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
+          <contextKey>diskRead</contextKey>
+          <expression id="449a2c10-46e4-4aee-bc7e-a7361f449c9b">
+            <annotation></annotation>
+            <name>Result Field: value</name>
+            <fieldName>value</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+      </assignments>
+      <throttleSize>0</throttleSize>
+    </step>
+    <returnStep id="04e684fe-bae1-40bb-a56b-a0aa2717704c">
+      <annotation></annotation>
+      <name>Error : failure</name>
+      <bounds>
+        <x>85.0</x>
+        <y>167.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="ddb36368-513e-44d7-bbbc-3d8b9500ad2b">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>04e684fe-bae1-40bb-a56b-a0aa2717704c</refId>
+          </destination>
+          <source>
+            <refId>04e684fe-bae1-40bb-a56b-a0aa2717704c</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>ERROR</returnStepType>
+      <assignments/>
+    </returnStep>
+    <step id="f980948f-7a12-4b45-ba81-c10dd70e16a7">
+      <annotation>249729f2-1085-40fd-88aa-c7a0abb8ea3d.f980948f-7a12-4b45-ba81-c10dd70e16a7.description</annotation>
+      <name>Get Average Seconds per Disk Write</name>
+      <bounds>
+        <x>244.0</x>
+        <y>20.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <iconSpec id="7ee1b194-08a5-43c3-9931-0a0ef45a0f90">
+        <baseIcon>document_pulse.png</baseIcon>
+        <basePath>Operating System/</basePath>
+        <readOnly>false</readOnly>
+        <layers>
+          <iconSpec id="e50e2c4c-62ee-4def-aa6c-8905f14f47cd">
+            <baseIcon>harddisk.png</baseIcon>
+            <basePath>Operating System/</basePath>
+            <readOnly>false</readOnly>
+            <layers/>
+          </iconSpec>
+          <iconSpec id="5e2a2202-cbcd-4dd4-83c0-555e08e0044f">
+            <baseIcon>edit.png</baseIcon>
+            <basePath>Annotations/</basePath>
+            <readOnly>false</readOnly>
+            <layers/>
+          </iconSpec>
+        </layers>
+      </iconSpec>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <userInputBinding id="83b8da28-cd3c-4ecd-9be2-d0852789d85f">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>host</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+          <prompt>249729f2-1085-40fd-88aa-c7a0abb8ea3d.83b8da28-cd3c-4ecd-9be2-d0852789d85f.prompt</prompt>
+          <isMultiSelect>false</isMultiSelect>
+          <sourceDelimiter>|</sourceDelimiter>
+        </userInputBinding>
+        <staticBinding id="4b2ca0c4-d0bb-4a74-ac6e-373edb54dd1e">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>object</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>physicaldisk</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="2f0c297b-92ca-4aae-a734-e9ec9fb0a573">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>counter</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>avg. disk sec/write</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="c5065ebf-d5ea-4236-8d6e-db7140bcc8ae">
+          <annotation></annotation>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>instance</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>_total</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="494d1726-397e-4647-9e06-b85588859280">
+          <annotation></annotation>
+          <name>failure</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>04e684fe-bae1-40bb-a56b-a0aa2717704c</refId>
+          </destination>
+          <source>
+            <refId>f980948f-7a12-4b45-ba81-c10dd70e16a7</refId>
+          </source>
+          <positions>
+            <point>
+              <x>294.0</x>
+              <y>54.0</y>
+            </point>
+            <point>
+              <x>135.0</x>
+              <y>201.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+        <transition id="21301876-ff8f-495c-8c59-7c1fbf8820a1">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>0a097f58-6c18-477b-aa7f-81237dca6834</refId>
+          </destination>
+          <source>
+            <refId>f980948f-7a12-4b45-ba81-c10dd70e16a7</refId>
+          </source>
+          <positions>
+            <point>
+              <x>268.8703703703704</x>
+              <y>86.0</y>
+            </point>
+            <point>
+              <x>338.0</x>
+              <y>89.0</y>
+            </point>
+            <point>
+              <x>294.0</x>
+              <y>217.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>a74e40e6-a00d-4b49-8d5b-bda9a14f1166</refId>
+      </opRef>
+      <assignments>
+        <flowVariableAssignment id="b666b355-fc37-4bde-bb07-cbbf182705bf">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
+          <contextKey>diskWrite</contextKey>
+          <expression id="5634451d-efc7-4d7d-a835-717631302b59">
+            <annotation></annotation>
+            <name>Result Field: value</name>
+            <fieldName>value</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+      </assignments>
+      <throttleSize>0</throttleSize>
+    </step>
+    <returnStep id="0a097f58-6c18-477b-aa7f-81237dca6834">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>244.0</x>
+        <y>167.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="c4bf4863-96af-4319-b49a-8e44461290fd">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>0a097f58-6c18-477b-aa7f-81237dca6834</refId>
+          </destination>
+          <source>
+            <refId>0a097f58-6c18-477b-aa7f-81237dca6834</refId>
+          </source>
+          <positions/>
+        </transition>
+        <transition id="11bb4ec7-0d16-4bdc-b577-a78d73b072b3">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>0a097f58-6c18-477b-aa7f-81237dca6834</refId>
+          </destination>
+          <source>
+            <refId>0a097f58-6c18-477b-aa7f-81237dca6834</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
+  </steps>
+  <startSteps>82147fc7-41d9-4331-873e-a8eb4a500cae</startSteps>
+</flow>

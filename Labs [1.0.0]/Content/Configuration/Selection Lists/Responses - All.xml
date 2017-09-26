@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="d4e82f5e-5243-42a7-85f4-91aa6bb47dfa">
+  <descriptionCdata><![CDATA[d4e82f5e-5243-42a7-85f4-91aa6bb47dfa.description=OO350 Lab 5 Exercise 2
+]]></descriptionCdata>
+  <annotation>d4e82f5e-5243-42a7-85f4-91aa6bb47dfa.description</annotation>
+  <name>Responses - All</name>
+  <storage>
+    <string>success</string>
+    <string>diagnosed</string>
+    <string>no action</string>
+    <string>failed</string>
+  </storage>
+</selectionList>

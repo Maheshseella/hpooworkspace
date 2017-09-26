@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="0a4bac36-bdaf-4745-ae4a-bda03f08768f">
+  <descriptionCdata><![CDATA[0a4bac36-bdaf-4745-ae4a-bda03f08768f.465fb107-4de4-48f3-886c-d0c2704dec0f.prompt=Input username\:
+0a4bac36-bdaf-4745-ae4a-bda03f08768f.528893ac-7481-4764-9993-41c22d7562f6.prompt=Input host\:
+0a4bac36-bdaf-4745-ae4a-bda03f08768f.81523778-bd3a-415a-8129-41f622a98ac1.prompt=Input namespace (default root\\cimv2)\:
+0a4bac36-bdaf-4745-ae4a-bda03f08768f.877105f6-afc9-4423-9335-b5077c94b244.prompt=Input password\:
+0a4bac36-bdaf-4745-ae4a-bda03f08768f.description=<pre>\nRuns a query against WMI and returns all the properties in XML format.\n\nNOTE\: use WMIQueryFormat on the returned XML to convert to some other format.\n\nInputs\:\nhost - Host name or ip address of the system on which the WMI query will be run.\nusername - Username to use for WMI impersonation on the host for this operation (can be left blank).\npassword - Password of the user.\nnamespace - Namespace to run query against. If not provided, the root\\cimv2 namespace is used by default.\nquery - The query to execute (e.g. select * from win32_service).\n\nResponses\:\nsuccess - The query returned successfully.\nfailure - Unable to execute query.\n</pre>
+0a4bac36-bdaf-4745-ae4a-bda03f08768f.fe6f4564-77b9-4ae6-9ffc-213c5ce29d60.prompt=Input WMI query\:
+]]></descriptionCdata>
+  <annotation>0a4bac36-bdaf-4745-ae4a-bda03f08768f.description</annotation>
+  <name>WMI Query Environment Variable</name>
+  <categories/>
+  <inputs>
+    <userInputBinding id="528893ac-7481-4764-9993-41c22d7562f6">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>true</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>host</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>0a4bac36-bdaf-4745-ae4a-bda03f08768f.528893ac-7481-4764-9993-41c22d7562f6.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="465fb107-4de4-48f3-886c-d0c2704dec0f">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>username</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>0a4bac36-bdaf-4745-ae4a-bda03f08768f.465fb107-4de4-48f3-886c-d0c2704dec0f.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="877105f6-afc9-4423-9335-b5077c94b244">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>ENCRYPTED</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>password</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>0a4bac36-bdaf-4745-ae4a-bda03f08768f.877105f6-afc9-4423-9335-b5077c94b244.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="81523778-bd3a-415a-8129-41f622a98ac1">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>namespace</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>0a4bac36-bdaf-4745-ae4a-bda03f08768f.81523778-bd3a-415a-8129-41f622a98ac1.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="fe6f4564-77b9-4ae6-9ffc-213c5ce29d60">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>true</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>query</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>0a4bac36-bdaf-4745-ae4a-bda03f08768f.fe6f4564-77b9-4ae6-9ffc-213c5ce29d60.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="41afc196-1ce6-4bba-8550-84c0cddad788">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules>
+        <expression id="b71dbbe4-3d36-4d35-926e-568a6b95782c">
+          <annotation></annotation>
+          <name></name>
+          <fieldName>returnCode</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="e67cb786-60fc-4ea9-9562-d03bcc025ae2">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>0</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="dfe60bc7-2f9c-4dc8-913b-a166bb13b7b7">
+      <annotation></annotation>
+      <name>failure</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>ERROR</type>
+      <matchRules>
+        <expression id="48d8d7e0-dec4-48d6-8225-998dc3b9b753">
+          <annotation></annotation>
+          <name></name>
+          <fieldName>returnCode</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="512eddef-c87d-4a30-a4bd-fbda1b9d6706">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>1</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="5cb46142-d658-47b3-9371-4bf947cb7f9a">
+    <annotation></annotation>
+    <name></name>
+    <fieldName>returnResult</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="c716f52e-52e6-4735-9ff0-679359ce90e9">
+    <baseIcon>windows_server.png</baseIcon>
+    <basePath>Servers/</basePath>
+    <readOnly>false</readOnly>
+    <layers>
+      <iconSpec id="21ab47ab-c789-4cb8-8392-2a2803d3c3be">
+        <baseIcon>view.png</baseIcon>
+        <basePath>Annotations/</basePath>
+        <readOnly>false</readOnly>
+        <layers/>
+      </iconSpec>
+    </layers>
+  </iconSpec>
+  <opRef>
+    <refId>db1c9e03-65fb-44a8-a5ae-4ab1fe64236b</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+  <overrideGroupAlias>${overrideNRAS}</overrideGroupAlias>
+</operation>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="abfb27f0-d517-4936-b06a-b81655ebbf4b">
+  <descriptionCdata><![CDATA[]]></descriptionCdata>
+  <annotation></annotation>
+  <name>ipconfig</name>
+  <categories/>
+  <inputs>
+    <staticBinding id="b83e2507-a4fb-4f9f-9cd6-d156b06be0ce">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>command</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value>ipconfig</value>
+      <record>false</record>
+    </staticBinding>
+    <userInputBinding id="9d570ded-2caa-45e1-8f27-e73660a274ef">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>arguments</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="5b1b4a1c-15b1-49f0-8f43-1a014051c7bf">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>environment</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="e47fcb1e-914d-4aff-bf41-ce707bd9f76c">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>path</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="10fc4728-a749-4314-9758-af251becfecc">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>cmd_timeout</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="6a79ea85-7ed9-4f9b-aae1-654fe333d89a">
+      <annotation></annotation>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>returnImmediately</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt></prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="1eacdc45-84cb-47b4-87c3-b66715efcdd7">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules>
+        <expression id="fb73d85f-ae56-426e-a0d0-b02c76e56078">
+          <annotation></annotation>
+          <name>returnCode</name>
+          <fieldName>returnCode</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="39e7044e-fab3-41e7-9ace-8a4cdcdb0463">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>0</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="caaf4bb5-732a-42c8-9fa7-330ca9a36d2d">
+      <annotation></annotation>
+      <name>failure</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>ERROR</type>
+      <matchRules>
+        <expression id="7f28603d-8cf1-47b3-8e2d-abd40566009d">
+          <annotation></annotation>
+          <name>returnCode</name>
+          <fieldName>returnCode</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="d41df112-d491-4f12-979f-ed563bb92534">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>-1</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions>
+    <expression id="80b7dcee-9ba0-4972-b63e-ddfc5a43f776">
+      <annotation></annotation>
+      <name>Output String</name>
+      <fieldName>returnResult</fieldName>
+      <sourceType>RAWRESULT</sourceType>
+      <filters/>
+    </expression>
+  </availableResultExpressions>
+  <resultExpression id="214c92dc-4990-489b-8402-43bdc979f3d2">
+    <annotation></annotation>
+    <name>returnResult</name>
+    <fieldName>returnResult</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="e024609a-65d7-4687-92e2-a79140be09ff">
+    <baseIcon>client_network.png</baseIcon>
+    <basePath>/Networking/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <plugin>
+    <groupId>com.hp.oo</groupId>
+    <artifactId>oo-base-legacy-plugin</artifactId>
+    <version>1.3.0</version>
+    <actionName>com.iconclude.content.actions.cmd.Cmd</actionName>
+  </plugin>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+</operation>

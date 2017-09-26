@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="2309a339-3ac6-45d1-bd4c-8576375103e7">
+  <descriptionCdata><![CDATA[2309a339-3ac6-45d1-bd4c-8576375103e7.fb197844-2084-47e0-9836-ca1b149d9b8a.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nInputs\:\nfield1 - optional input that can be used for filtering flow variables.\nfield2 - optional input that can be used for filtering flow variables.\nfield3 - optional input that can be used for filtering flow variables.\nfield4 - optional input that can be used for filtering flow variables.\n\nResponses\:\nsuccess - this operation never fails.\n</pre>
+]]></descriptionCdata>
+  <annotation></annotation>
+  <name>E2 XML Sample</name>
+  <categories/>
+  <inputs>
+    <staticBinding id="8f9043a1-f5c9-42cc-a959-7ce95a5ed368">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>XmlDocument</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;CATALOG&gt;
+	&lt;PLANT version=&quot;3.5&quot;&gt;
+		&lt;COMMON&gt;Bloodroot&lt;/COMMON&gt;
+		&lt;BOTANICAL&gt;Sanguinaria canadensis&lt;/BOTANICAL&gt;
+		&lt;ZONE&gt;4&lt;/ZONE&gt;
+		&lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
+		&lt;PRICE&gt;$2.44&lt;/PRICE&gt;
+		&lt;AVAILABILITY&gt;031599&lt;/AVAILABILITY&gt;
+	&lt;/PLANT&gt;
+	&lt;PLANT&gt;
+		&lt;COMMON&gt;Columbine&lt;/COMMON&gt;
+		&lt;BOTANICAL&gt;Aquilegia canadensis&lt;/BOTANICAL&gt;
+		&lt;ZONE&gt;3&lt;/ZONE&gt;
+		&lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
+		&lt;PRICE&gt;$9.37&lt;/PRICE&gt;
+		&lt;AVAILABILITY&gt;030699&lt;/AVAILABILITY&gt;
+	&lt;/PLANT&gt;
+	&lt;PLANT&gt;
+		&lt;COMMON&gt;Marsh Marigold&lt;/COMMON&gt;
+		&lt;BOTANICAL&gt;Caltha palustris&lt;/BOTANICAL&gt;
+		&lt;ZONE&gt;4&lt;/ZONE&gt;
+		&lt;LIGHT&gt;Mostly Sunny&lt;/LIGHT&gt;
+		&lt;PRICE&gt;$6.81&lt;/PRICE&gt;
+		&lt;AVAILABILITY&gt;051799&lt;/AVAILABILITY&gt;
+	&lt;/PLANT&gt;
+	&lt;PLANT&gt;
+		&lt;COMMON&gt;Cowslip&lt;/COMMON&gt;
+		&lt;BOTANICAL&gt;Caltha palustris&lt;/BOTANICAL&gt;
+		&lt;ZONE&gt;4&lt;/ZONE&gt;  
+		&lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
+		&lt;PRICE&gt;$9.90&lt;/PRICE&gt;
+		&lt;AVAILABILITY&gt;030699&lt;/AVAILABILITY&gt;
+	&lt;/PLANT&gt;
+&lt;/CATALOG&gt; 
+</value>
+      <record>false</record>
+    </staticBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="ac66e369-ab5e-4a53-bf2f-b62691c345d6">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="b89a357b-00a7-435a-95b2-6b1dd2679f25">
+    <annotation></annotation>
+    <name>FailureMessage</name>
+    <fieldName>FailureMessage</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="f506f79f-0f48-40c7-be34-56bf8e864ed7">
+    <baseIcon>flow.png</baseIcon>
+    <basePath>System</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <callouts/>
+  <checkPointFlow>true</checkPointFlow>
+  <compatibleRuntimeContext>false</compatibleRuntimeContext>
+  <historyCheckPointFlow>true</historyCheckPointFlow>
+  <steps>
+    <step id="fb197844-2084-47e0-9836-ca1b149d9b8a">
+      <annotation>2309a339-3ac6-45d1-bd4c-8576375103e7.fb197844-2084-47e0-9836-ca1b149d9b8a.description</annotation>
+      <name>XmlDocument</name>
+      <bounds>
+        <x>27.0</x>
+        <y>20.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <staticBinding id="52df2aac-f014-4e58-8d36-2653785b857e">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>field1</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="83e13034-2f95-4efd-a0c1-e8b1638a4537">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>field2</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="f6f87c0a-4fc9-47b2-9299-be168ac4dda3">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>field3</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="7c729f7f-981c-4994-a5b2-62a21f71ff0a">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>field4</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="827ca7ec-9f39-46f1-a861-5e6acfcd4d6e">
+          <annotation></annotation>
+          <toContextKey></toContextKey>
+          <fromContextKey></fromContextKey>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <recordKey></recordKey>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>Field_1</inputSymbol>
+          <listDelimiter></listDelimiter>
+          <value>${field1}</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="bf1d36fd-8d70-4695-bcfb-2d4080ec896c">
+          <annotation></annotation>
+          <toContextKey></toContextKey>
+          <fromContextKey></fromContextKey>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <recordKey></recordKey>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>Field_2</inputSymbol>
+          <listDelimiter></listDelimiter>
+          <value>${field2}</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="c773692e-bb4f-41da-bfc7-ae3231473704">
+          <annotation></annotation>
+          <toContextKey></toContextKey>
+          <fromContextKey></fromContextKey>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <recordKey></recordKey>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>Field_3</inputSymbol>
+          <listDelimiter></listDelimiter>
+          <value>${field3}</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="b5cd8ad3-1225-456e-b169-8c794665c3d2">
+          <annotation></annotation>
+          <toContextKey></toContextKey>
+          <fromContextKey></fromContextKey>
+          <assignFromContext>false</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <recordKey></recordKey>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>Field_4</inputSymbol>
+          <listDelimiter></listDelimiter>
+          <value>${field4}</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="be9a5f36-0c92-4d03-a9e9-c798764d54aa">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>abddbd20-c065-46f5-bd4c-9c26b0df0656</refId>
+          </destination>
+          <source>
+            <refId>fb197844-2084-47e0-9836-ca1b149d9b8a</refId>
+          </source>
+          <positions>
+            <point>
+              <x>77.0</x>
+              <y>54.0</y>
+            </point>
+            <point>
+              <x>222.0</x>
+              <y>51.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+    <returnStep id="abddbd20-c065-46f5-bd4c-9c26b0df0656">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>172.0</x>
+        <y>20.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="0722ad54-e53a-4a41-9b60-e3d5dbb0ed8f">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>abddbd20-c065-46f5-bd4c-9c26b0df0656</refId>
+          </destination>
+          <source>
+            <refId>abddbd20-c065-46f5-bd4c-9c26b0df0656</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
+  </steps>
+  <startSteps>fb197844-2084-47e0-9836-ca1b149d9b8a</startSteps>
+</flow>

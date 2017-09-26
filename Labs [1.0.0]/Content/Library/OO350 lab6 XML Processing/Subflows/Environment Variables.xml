@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="db10f424-7592-493a-aafd-47dc8d29349c">
+  <descriptionCdata><![CDATA[db10f424-7592-493a-aafd-47dc8d29349c.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nInputs\:\nfield1 - optional input that can be used for filtering flow variables.\nfield2 - optional input that can be used for filtering flow variables.\nfield3 - optional input that can be used for filtering flow variables.\nfield4 - optional input that can be used for filtering flow variables.\n\nResponses\:\nsuccess - this operation never fails.\n</pre>
+]]></descriptionCdata>
+  <annotation>db10f424-7592-493a-aafd-47dc8d29349c.description</annotation>
+  <name>Environment Variables</name>
+  <categories/>
+  <inputs>
+    <staticBinding id="8be9294c-5162-4667-8c4d-1298af268d5a">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field1</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="47e57096-8043-4b92-b19f-4c111547e594">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field2</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="01eec8da-f4e7-4921-a464-61a17a6405f4">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field3</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="6cc469ca-0d65-49af-8a25-e62a7178c80d">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field4</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="95fc173d-c2fb-4b6b-8a0b-3d19263f3b7a">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_1</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field1}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="84e112da-02fd-4405-a2c5-0198b4a559b0">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_2</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field2}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="bf309030-4c57-4490-8e2e-fdcaa61f78f0">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_3</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field3}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="4eb48d91-c80d-4178-b733-6633d8f3b50a">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_4</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field4}</value>
+      <record>false</record>
+    </staticBinding>
+  </inputs>
+  <scriptlet id="17c4d9e0-112b-46ae-9d18-0f25608ef330">
+    <annotation></annotation>
+    <name>Operation Environment Variables (db10f424-7592-493a-aafd-47dc8d29349c)</name>
+    <script>userProfile = System.getenv(&quot;USERPROFILE&quot;);
+
+</script>
+    <type>RHINO</type>
+  </scriptlet>
+  <possibleResponses>
+    <opResponse id="91d38ae2-0487-42a5-842e-679de6813b0e">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="38c5669c-0b98-412b-bbd7-69472c46c52e">
+    <annotation></annotation>
+    <name></name>
+    <fieldName>Field_1</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="0296b7ab-3223-489d-8598-4adab6319812">
+    <baseIcon>display_report.png</baseIcon>
+    <basePath>Utilities/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <opRef>
+    <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+</operation>

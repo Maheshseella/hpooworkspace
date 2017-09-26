@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="f65a6511-e262-4eff-81a4-7b60dd092abe">
+  <descriptionCdata><![CDATA[f65a6511-e262-4eff-81a4-7b60dd092abe.description=OO120 Lab 4 Exercise 10
+]]></descriptionCdata>
+  <annotation>f65a6511-e262-4eff-81a4-7b60dd092abe.description</annotation>
+  <name>Host List</name>
+  <storage>
+    <string>localhost</string>
+    <string>HPOOSE10</string>
+  </storage>
+</selectionList>

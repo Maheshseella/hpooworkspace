@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="028d7176-75e1-44bd-835f-204a6ff694ea">
+  <descriptionCdata><![CDATA[028d7176-75e1-44bd-835f-204a6ff694ea.description=OO350 Lab 6 exercise 6
+]]></descriptionCdata>
+  <annotation>028d7176-75e1-44bd-835f-204a6ff694ea.description</annotation>
+  <name>XSL Text Colors</name>
+  <storage>
+    <string>red</string>
+    <string>green</string>
+    <string>yellow</string>
+    <string>blue</string>
+    <string>black</string>
+  </storage>
+</selectionList>

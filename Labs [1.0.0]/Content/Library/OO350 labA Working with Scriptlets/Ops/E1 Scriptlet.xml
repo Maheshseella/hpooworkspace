@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="9ec3faea-1c88-4a63-bacc-788a55285666">
+  <descriptionCdata><![CDATA[9ec3faea-1c88-4a63-bacc-788a55285666.description=<pre>This is an operation that does nothing. It can be used to call scriptlets.\n\nInputs\:\nnone\n\nResponses\:\nsuccess - \nfailure\n</pre>
+]]></descriptionCdata>
+  <annotation>9ec3faea-1c88-4a63-bacc-788a55285666.description</annotation>
+  <name>E1 Scriptlet</name>
+  <categories/>
+  <inputs/>
+  <possibleResponses>
+    <opResponse id="e68d0bdc-57c4-4b44-a91b-56090f6ae19b">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+    <opResponse id="2c5a6b05-cda5-4a15-8e0c-b0bff540139e">
+      <annotation></annotation>
+      <name>failure</name>
+      <isDefault>false</isDefault>
+      <onFailure>true</onFailure>
+      <type>ERROR</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="72718298-cd72-422b-8981-17f31f9aba5e">
+    <annotation></annotation>
+    <name>returnCode</name>
+    <fieldName>returnCode</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="8ede9dec-5f98-4008-8307-dfd3431353c4">
+    <baseIcon>text_code_javascript.png</baseIcon>
+    <basePath>/Others/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <opRef>
+    <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+</operation>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="6c267d87-57be-4085-af84-f6d8e6ce2c94">
+  <descriptionCdata><![CDATA[6c267d87-57be-4085-af84-f6d8e6ce2c94.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nInputs\:\nfield1 - optional input that can be used for filtering flow variables.\nfield2 - optional input that can be used for filtering flow variables.\nfield3 - optional input that can be used for filtering flow variables.\nfield4 - optional input that can be used for filtering flow variables.\n\nResponses\:\nsuccess - this operation never fails.\n</pre>
+]]></descriptionCdata>
+  <annotation>6c267d87-57be-4085-af84-f6d8e6ce2c94.description</annotation>
+  <name>E2 Responses</name>
+  <categories/>
+  <inputs>
+    <staticBinding id="634ee442-7b10-482e-b64d-139c8d00a481">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field1</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="a7dec4ec-196c-4e88-8195-c4488a8157d8">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field2</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="a1ec7bd0-a816-4f0e-84e8-5dc9c5585333">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field3</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="d101f1f6-9eba-4387-84ee-eee5599a5309">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>field4</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <value></value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="732276a9-f536-40ce-a928-d452c7d3761c">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_1</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field1}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="1231735d-4ce7-414d-acd7-7d327b62e232">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_2</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field2}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="8dc5cbef-8f81-4f62-9b13-d215f210ff8c">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_3</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field3}</value>
+      <record>false</record>
+    </staticBinding>
+    <staticBinding id="b0353ffc-b6a0-4859-9d71-7c256b000b6c">
+      <annotation></annotation>
+      <toContextKey></toContextKey>
+      <fromContextKey></fromContextKey>
+      <assignFromContext>false</assignFromContext>
+      <assignToContext>false</assignToContext>
+      <inputType>STRING</inputType>
+      <recordKey></recordKey>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Field_4</inputSymbol>
+      <listDelimiter></listDelimiter>
+      <value>${field4}</value>
+      <record>false</record>
+    </staticBinding>
+  </inputs>
+  <possibleResponses>
+    <opResponse id="81639862-7f53-40fc-b339-8f1b4c4a2554">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules>
+        <expression id="b5b716d0-59d1-42c7-ab5a-8fa839801afc">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="b55158b1-e5dd-4ef3-b4cc-299ed7f72b7a">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>success</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="89c51dfa-55f9-48d7-9d07-1e0315bdca95">
+      <annotation></annotation>
+      <name>diagnosed</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>DIAGNOSED</type>
+      <matchRules>
+        <expression id="16f4f23e-ca03-4624-8052-74a51ca7ec24">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="fb1d42e5-7393-4c12-b48b-c59661980cb7">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>diagnosed</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="e9ef4ed5-0558-430d-9610-10cd2333f18d">
+      <annotation></annotation>
+      <name>no action</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>NO_ACTION_TAKEN</type>
+      <matchRules>
+        <expression id="23aae4e9-5f7f-46ec-b3b7-7907cc4673f7">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="00483a1f-5a3d-47fb-aa93-cb3be4f9a263">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>no action</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="66125c9d-ead3-4a52-98f7-b92bf900ba6c">
+      <annotation></annotation>
+      <name>failure</name>
+      <isDefault>true</isDefault>
+      <onFailure>true</onFailure>
+      <type>ERROR</type>
+      <matchRules>
+        <expression id="a987aa34-ad9d-4813-873f-1edc263727b2">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="8072f665-b355-4f09-b345-697b4b70b9cb">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>failure</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="2e2e4df9-7d18-437f-97ce-00871501ac59">
+    <annotation></annotation>
+    <name></name>
+    <fieldName>Field_1</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="0478e174-e6d7-4142-b4b8-b7b70d3ca24b">
+    <baseIcon>display_report.png</baseIcon>
+    <basePath>Utilities/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <opRef>
+    <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+</operation>

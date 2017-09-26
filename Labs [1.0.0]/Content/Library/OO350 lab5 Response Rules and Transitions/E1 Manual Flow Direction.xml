@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow id="4b382616-c635-41ea-9017-36bea576c4b3">
+  <descriptionCdata><![CDATA[4b382616-c635-41ea-9017-36bea576c4b3.a1a23e68-4447-4c24-a7fd-a4a8b7a95ac7.description=<pre>\n\nDisplays a message to the user.\n\nInputs\:\n  message - The message text to display\n  title - The title on the message window. Defaults to "Status message".\n\nResponses\:\n  Always returns success.\n\nExamples\:\n  In order to display the message "Finished" to the user, go to the \n  detail screen for the input named "message" and change the Otherwise option\n  from Prompt User to Use Constant.  Then enter the text "Finished" into the\n  Constant Value field.\n\n  References to flow variables in the Contant Value field are expanded so that\n  the text may be dynamic.  Flow variable references are of the form\n  ${variable}.  For example, the text\:\n     ${count} systems were modified \n  could be used to display a message about the number of systems that were\n  repaired, whose value is in the flow variable "count".\n\n  When the message is displayed, it will properly render any embedded html\n  tags, which permits creating messages with more advanced formatting.  For \n  example to display a message in italics you could use\:\n    <i>This is important</i>\n  or to display a message in red\:\n    <i>This is <span style\="color\: red">really </span> important</i>\n\n  You can create messages that contain multiple lines by entering a multiple\n  line message in the Constant Value field, or by using HTML <BR> tags for line\n  breaks.  Note that \\n characters are displayed literally and are not used for\n  creating multiple lines.\n\n</pre>\n
+4b382616-c635-41ea-9017-36bea576c4b3.b925e4ea-be85-40be-8d4b-82b86d95dec1.description=<pre>\n\nDisplays a message to the user.\n\nInputs\:\n  message - The message text to display\n  title - The title on the message window. Defaults to "Status message".\n\nResponses\:\n  Always returns success.\n\nExamples\:\n  In order to display the message "Finished" to the user, go to the \n  detail screen for the input named "message" and change the Otherwise option\n  from Prompt User to Use Constant.  Then enter the text "Finished" into the\n  Constant Value field.\n\n  References to flow variables in the Contant Value field are expanded so that\n  the text may be dynamic.  Flow variable references are of the form\n  ${variable}.  For example, the text\:\n     ${count} systems were modified \n  could be used to display a message about the number of systems that were\n  repaired, whose value is in the flow variable "count".\n\n  When the message is displayed, it will properly render any embedded html\n  tags, which permits creating messages with more advanced formatting.  For \n  example to display a message in italics you could use\:\n    <i>This is important</i>\n  or to display a message in red\:\n    <i>This is <span style\="color\: red">really </span> important</i>\n\n  You can create messages that contain multiple lines by entering a multiple\n  line message in the Constant Value field, or by using HTML <BR> tags for line\n  breaks.  Note that \\n characters are displayed literally and are not used for\n  creating multiple lines.\n\n</pre>\n
+4b382616-c635-41ea-9017-36bea576c4b3.d3165565-0151-4585-acbe-a05035f7765e.description=This operation allows a user to select its response, thereby specifying what path of execution a flow takes.\nWhen the step is started the user will be prompted to select which of its responses to follow.
+4b382616-c635-41ea-9017-36bea576c4b3.f2979030-c772-42ba-9987-e24d3bad3457.description=<pre>\n\nDisplays a message to the user.\n\nInputs\:\n  message - The message text to display\n  title - The title on the message window. Defaults to "Status message".\n\nResponses\:\n  Always returns success.\n\nExamples\:\n  In order to display the message "Finished" to the user, go to the \n  detail screen for the input named "message" and change the Otherwise option\n  from Prompt User to Use Constant.  Then enter the text "Finished" into the\n  Constant Value field.\n\n  References to flow variables in the Contant Value field are expanded so that\n  the text may be dynamic.  Flow variable references are of the form\n  ${variable}.  For example, the text\:\n     ${count} systems were modified \n  could be used to display a message about the number of systems that were\n  repaired, whose value is in the flow variable "count".\n\n  When the message is displayed, it will properly render any embedded html\n  tags, which permits creating messages with more advanced formatting.  For \n  example to display a message in italics you could use\:\n    <i>This is important</i>\n  or to display a message in red\:\n    <i>This is <span style\="color\: red">really </span> important</i>\n\n  You can create messages that contain multiple lines by entering a multiple\n  line message in the Constant Value field, or by using HTML <BR> tags for line\n  breaks.  Note that \\n characters are displayed literally and are not used for\n  creating multiple lines.\n\n</pre>\n
+]]></descriptionCdata>
+  <annotation></annotation>
+  <name>E1 Manual Flow Direction</name>
+  <categories/>
+  <inputs/>
+  <possibleResponses>
+    <opResponse id="0f5e3a1d-e90c-4003-b9ef-e85caa1df2e7">
+      <annotation></annotation>
+      <name>success</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="01936b85-125e-4fdf-a94b-8f351e29871b">
+    <annotation></annotation>
+    <name>FailureMessage</name>
+    <fieldName>FailureMessage</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="6776f203-f636-4086-9d10-2243605b97ea">
+    <baseIcon>flow.png</baseIcon>
+    <basePath>System</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <callouts/>
+  <checkPointFlow>true</checkPointFlow>
+  <compatibleRuntimeContext>false</compatibleRuntimeContext>
+  <historyCheckPointFlow>true</historyCheckPointFlow>
+  <steps>
+    <step id="d3165565-0151-4585-acbe-a05035f7765e">
+      <annotation>4b382616-c635-41ea-9017-36bea576c4b3.d3165565-0151-4585-acbe-a05035f7765e.description</annotation>
+      <name>Manual</name>
+      <bounds>
+        <x>72.0</x>
+        <y>161.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="c4051a75-fa06-40a3-9733-285b58fd4acc">
+          <annotation></annotation>
+          <name>Path 1</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>Path 1</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>a1a23e68-4447-4c24-a7fd-a4a8b7a95ac7</refId>
+          </destination>
+          <source>
+            <refId>d3165565-0151-4585-acbe-a05035f7765e</refId>
+          </source>
+          <positions>
+            <point>
+              <x>122.0</x>
+              <y>195.0</y>
+            </point>
+            <point>
+              <x>302.0</x>
+              <y>57.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+        <transition id="ad488c05-0cf0-4b16-9079-fe4d0022df8a">
+          <annotation></annotation>
+          <name>Path 2</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>Path 2</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>b925e4ea-be85-40be-8d4b-82b86d95dec1</refId>
+          </destination>
+          <source>
+            <refId>d3165565-0151-4585-acbe-a05035f7765e</refId>
+          </source>
+          <positions>
+            <point>
+              <x>122.0</x>
+              <y>195.0</y>
+            </point>
+            <point>
+              <x>302.0</x>
+              <y>195.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+        <transition id="996d7683-d79b-4292-850e-129b99dbb67a">
+          <annotation></annotation>
+          <name>Path 3</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>Path 3</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>f2979030-c772-42ba-9987-e24d3bad3457</refId>
+          </destination>
+          <source>
+            <refId>d3165565-0151-4585-acbe-a05035f7765e</refId>
+          </source>
+          <positions>
+            <point>
+              <x>122.0</x>
+              <y>195.0</y>
+            </point>
+            <point>
+              <x>302.0</x>
+              <y>348.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>8ab18c7f-96b3-46cc-a5d9-3abccdf58700</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+    <step id="b925e4ea-be85-40be-8d4b-82b86d95dec1">
+      <annotation>4b382616-c635-41ea-9017-36bea576c4b3.b925e4ea-be85-40be-8d4b-82b86d95dec1.description</annotation>
+      <name>Path 2</name>
+      <bounds>
+        <x>252.0</x>
+        <y>161.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <staticBinding id="c25566cc-b0ab-4a1f-b4dc-4c1725d78539">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>message</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>You selected Path 2.</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="e16f8dee-17cc-4706-a260-f0faadd379a8">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>title</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>Status message</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="4843831d-4a99-40bf-b158-fec121a05186">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>64846de8-e3f8-413a-9c63-13c2f5744403</refId>
+          </destination>
+          <source>
+            <refId>b925e4ea-be85-40be-8d4b-82b86d95dec1</refId>
+          </source>
+          <positions>
+            <point>
+              <x>302.0</x>
+              <y>195.0</y>
+            </point>
+            <point>
+              <x>513.0</x>
+              <y>195.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>434e6fa2-26bc-4e84-9e1f-0aa6946cf920</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+    <returnStep id="64846de8-e3f8-413a-9c63-13c2f5744403">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>463.0</x>
+        <y>161.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="8079548e-d83c-447f-9f0c-f445a8c27955">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>64846de8-e3f8-413a-9c63-13c2f5744403</refId>
+          </destination>
+          <source>
+            <refId>64846de8-e3f8-413a-9c63-13c2f5744403</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
+    <step id="a1a23e68-4447-4c24-a7fd-a4a8b7a95ac7">
+      <annotation>4b382616-c635-41ea-9017-36bea576c4b3.a1a23e68-4447-4c24-a7fd-a4a8b7a95ac7.description</annotation>
+      <name>Path 1</name>
+      <bounds>
+        <x>252.0</x>
+        <y>23.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <staticBinding id="afe1b739-f9fd-4e41-ae37-f5c61db39511">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>message</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>You selected Path 1.</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="1d6c567a-33c4-4134-a85c-e6db43707a78">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>title</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>Status message</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="dd0b0867-a5e9-4ab4-a38e-949996dc3a18">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>64846de8-e3f8-413a-9c63-13c2f5744403</refId>
+          </destination>
+          <source>
+            <refId>a1a23e68-4447-4c24-a7fd-a4a8b7a95ac7</refId>
+          </source>
+          <positions>
+            <point>
+              <x>302.0</x>
+              <y>57.0</y>
+            </point>
+            <point>
+              <x>513.0</x>
+              <y>195.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>434e6fa2-26bc-4e84-9e1f-0aa6946cf920</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+    <step id="f2979030-c772-42ba-9987-e24d3bad3457">
+      <annotation>4b382616-c635-41ea-9017-36bea576c4b3.f2979030-c772-42ba-9987-e24d3bad3457.description</annotation>
+      <name>Path 3</name>
+      <bounds>
+        <x>252.0</x>
+        <y>314.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings>
+        <staticBinding id="249cfcfb-c8ee-4591-8d72-725394a54ffb">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>true</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>message</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>You selected Path 3.</value>
+          <record>false</record>
+        </staticBinding>
+        <staticBinding id="755fad40-173d-4854-b298-913e4dfd91bd">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>true</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>title</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value>Status message</value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="8f034dd6-ec13-487d-b1fd-fe3e8c92524b">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>64846de8-e3f8-413a-9c63-13c2f5744403</refId>
+          </destination>
+          <source>
+            <refId>f2979030-c772-42ba-9987-e24d3bad3457</refId>
+          </source>
+          <positions>
+            <point>
+              <x>302.0</x>
+              <y>348.0</y>
+            </point>
+            <point>
+              <x>513.0</x>
+              <y>195.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties/>
+      <opRef>
+        <refId>434e6fa2-26bc-4e84-9e1f-0aa6946cf920</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
+  </steps>
+  <startSteps>d3165565-0151-4585-acbe-a05035f7765e</startSteps>
+</flow>
