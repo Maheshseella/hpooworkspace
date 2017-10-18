@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="24e8f834-bec6-4bb7-8fa5-3f3143a7815b">
+  <descriptionCdata><![CDATA[]]></descriptionCdata>
+  <annotation></annotation>
+  <name>simplemath</name>
+  <storage>
+    <string>add</string>
+    <string>mul</string>
+    <string>div</string>
+    <string>sub</string>
+  </storage>
+</selectionList>

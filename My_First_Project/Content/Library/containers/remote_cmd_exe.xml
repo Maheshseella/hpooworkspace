@@ -6,11 +6,6 @@
   <name>remote_cmd_exe</name>
   <categories/>
   <inputs/>
-  <scriptlet id="338e7c4f-7fe5-4b6b-837a-28f6a540be95">
-    <annotation></annotation>
-    <name>Operation remote_cmd_exe (9fe341e2-8dcf-4829-9eab-4980160da550)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
     <opResponse id="d52c1e85-586a-4337-bd51-dda897fd0df2">
       <annotation></annotation>
@@ -82,7 +77,7 @@
           <isPersisted>true</isPersisted>
           <inputSymbol>host</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>192.168.83.130</value>
+          <value>192.168.83.135</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="02d6473e-082a-4a1b-8c2b-8245951f37ed">
